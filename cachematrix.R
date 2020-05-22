@@ -22,7 +22,10 @@ cacheSolve <- function(x, ...) {
     # get it from the cache and skips the computation. 
     message("getting cached data")
     return(inv)
+  }
   
-    }
+  mat.data = x$get()
+  inv = solve(mat.data, ...)
+  
        
 }
