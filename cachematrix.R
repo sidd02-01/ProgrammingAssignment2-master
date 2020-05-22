@@ -27,5 +27,10 @@ cacheSolve <- function(x, ...) {
   mat.data = x$get()
   inv = solve(mat.data, ...)
   
+  # sets the value of the inverse in the cache via the setinv function.
+  x$setinv(inv)
+  
+  return(inv)
+  
        
 }
